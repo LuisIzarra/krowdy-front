@@ -6,7 +6,7 @@ const VIDEO_RECORDER_STATUS_PLAY = "video_recorder_status_play";
 
 const VIDEO_RECORDER_STATUS_STOP = "video_recorder_status_stop";
 
-const Questionary = ({ question }) => {
+const Questionary = ({ question, onClickPlay }) => {
   const [videoRecoderStatus, setVideoRecoderStatus] = useState(
     VIDEO_RECORDER_STATUS_PLAY
   );
@@ -23,6 +23,7 @@ const Questionary = ({ question }) => {
 
   const _handleOnClickPlay = () => {
     _handleOnClick(VIDEO_RECORDER_STATUS_STOP);
+    onClickPlay();
     console.log("play");
   };
 
