@@ -13,18 +13,13 @@ const Home = () => {
       <Link to="/">
         <h1>Video Questionario</h1>
       </Link>
-      <Link to="/questionary">
-        <Questionary question={"What is your favorite video game?"} />
-      </Link>
-      <Link to="/questionary">
-        <Questionary question={"What is your favorite sport?"} />
-      </Link>
-      <Link to="/questionary">
-        <Questionary question={"What is your favorite color?"} />
-      </Link>
-      <Link to="/questionary">
-        <Questionary question={"What is your favorite soccer player?"} />
-      </Link>
+      <Questionary question={"What is your favorite video game?"} />
+
+      <Questionary question={"What is your favorite sport?"} />
+
+      <Questionary question={"What is your favorite color?"} />
+
+      <Questionary question={"What is your favorite soccer player?"} />
     </Box>
   );
 };

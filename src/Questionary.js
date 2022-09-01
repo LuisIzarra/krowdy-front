@@ -80,16 +80,18 @@ const Questionary = ({ question }) => {
             backgroundColor: "gray",
           }}
         >
-          <Typography
-            px={0.5}
-            py={1}
-            sx={{
-              marginTop: "30px",
-              textAlign: "center",
-            }}
-          >
-            {question}
-          </Typography>
+          <Link to="/questionary">
+            <Typography
+              px={0.5}
+              py={1}
+              sx={{
+                marginTop: "30px",
+                textAlign: "center",
+              }}
+            >
+              {question}
+            </Typography>
+          </Link>
         </Box>
       </Box>
     </Box>
