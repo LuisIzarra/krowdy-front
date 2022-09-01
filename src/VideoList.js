@@ -1,6 +1,4 @@
-import Questionary from "./Questionary";
-import { Box } from "@mui/material";
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./Home";
 import QuestionaryDetails from "./QuestionaryDetails";
 
