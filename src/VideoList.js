@@ -6,7 +6,7 @@ const VideoList = () => {
   return (
     <Router>
       <Routes>
-        <Route path="/questionary" element={<QuestionaryDetails />} />
+        <Route path="/question/:q" element={<QuestionaryDetails />} />
         <Route path="/" element={<Home />} />
       </Routes>
     </Router>

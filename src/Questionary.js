@@ -96,7 +96,7 @@ const Questionary = ({
             ...sxProps,
           }}
         >
-          <Link to="/questionary">
+          <Link to={`/question/${encodeURIComponent(question)}`}>
             <Typography
               px={0.5}
               py={1}

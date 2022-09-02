@@ -1,9 +1,13 @@
 import Questionary from "./Questionary";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { Box } from "@mui/material";
 import { useRef } from "react";
 
 const QuestionaryDetails = () => {
+  const searchParams = useParams();
+
+  const question = searchParams["q"];
+
   const videoRef = useRef();
 
   const _handleOnClickPlay = () => {
@@ -33,6 +37,7 @@ const QuestionaryDetails = () => {
         paddingTop="0px"
         marginTop="-89px"
         videoButtonsPosition="absolute"
+        question={question}
         videoComponent={
           <video
             ref={videoRef}
