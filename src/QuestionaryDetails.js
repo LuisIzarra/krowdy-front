@@ -25,16 +25,26 @@ const QuestionaryDetails = () => {
   return (
     <Box>
       <Link to="/">Volver</Link>
-      <Questionary onClickPlay={_handleOnClickPlay} />
-      <video
-        ref={videoRef}
-        onCanPlay={_handleCanPlay}
-        width="200px"
-        height="200px"
-        autoPlay
-        playsInline
-        muted
-      ></video>
+      <Questionary
+        width="864px"
+        height="612px"
+        onClickPlay={_handleOnClickPlay}
+        sxProps={{ marginTop: "-34px", width: "864px", height: "96px" }}
+        paddingTop="0px"
+        marginTop="-89px"
+        videoButtonsPosition="absolute"
+        videoComponent={
+          <video
+            ref={videoRef}
+            onCanPlay={_handleCanPlay}
+            width="862px"
+            height="612px"
+            autoPlay
+            playsInline
+            muted
+          ></video>
+        }
+      />
     </Box>
   );
 };

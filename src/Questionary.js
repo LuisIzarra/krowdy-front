@@ -6,7 +6,17 @@ const VIDEO_RECORDER_STATUS_PLAY = "video_recorder_status_play";
 
 const VIDEO_RECORDER_STATUS_STOP = "video_recorder_status_stop";
 
-const Questionary = ({ question, onClickPlay }) => {
+const Questionary = ({
+  question,
+  onClickPlay,
+  width = 245,
+  height = 393,
+  sxProps = {},
+  paddingTop = "290px",
+  marginTop = 0,
+  videoButtonsPosition = "initial",
+  videoComponent = null,
+}) => {
   const [videoRecoderStatus, setVideoRecoderStatus] = useState(
     VIDEO_RECORDER_STATUS_PLAY
   );
@@ -31,14 +41,17 @@ const Questionary = ({ question, onClickPlay }) => {
     <Box>
       <Box
         sx={{
-          width: 245,
-          height: 393,
+          width: { width },
+          height: { height },
           backgroundColor: "black",
         }}
       >
+        {videoComponent}
         <Box
           sx={{
-            paddingTop: "290px",
+            paddingTop: { paddingTop },
+            marginTop: { marginTop },
+            position: videoButtonsPosition,
           }}
         >
           <Box
@@ -76,9 +89,11 @@ const Questionary = ({ question, onClickPlay }) => {
         </Box>
         <Box
           sx={{
+            marginTop: "0",
             width: "245px",
             height: "65px",
             backgroundColor: "gray",
+            ...sxProps,
           }}
         >
           <Link to="/questionary">
