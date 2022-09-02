@@ -2,6 +2,7 @@ import Questionary from "./Questionary";
 import { Link, useParams } from "react-router-dom";
 import { Box } from "@mui/material";
 import { useRef } from "react";
+import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 
 const QuestionaryDetails = () => {
   const searchParams = useParams();
@@ -28,7 +29,10 @@ const QuestionaryDetails = () => {
 
   return (
     <Box>
-      <Link to="/">Volver</Link>
+      <Link to="/">
+        <ArrowBackIcon />
+        Volver
+      </Link>
       <Questionary
         width="864px"
         height="612px"
@@ -38,6 +42,7 @@ const QuestionaryDetails = () => {
         marginTop="-89px"
         videoButtonsPosition="absolute"
         question={question}
+        typoProps={{ fontSize: "2rem", paddingTop: "25px" }}
         videoComponent={
           <video
             ref={videoRef}

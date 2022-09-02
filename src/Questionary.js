@@ -16,6 +16,7 @@ const Questionary = ({
   marginTop = 0,
   videoButtonsPosition = "initial",
   videoComponent = null,
+  typoProps = {},
 }) => {
   const [videoRecoderStatus, setVideoRecoderStatus] = useState(
     VIDEO_RECORDER_STATUS_PLAY
@@ -103,6 +104,7 @@ const Questionary = ({
               sx={{
                 marginTop: "30px",
                 textAlign: "center",
+                ...typoProps,
               }}
             >
               {question}
