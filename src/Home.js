@@ -14,13 +14,13 @@ const Home = () => {
           gap: 3,
         }}
       >
-        <Questionary question={"What is your favorite video game?"} />
+        <Questionary question={"Cual es tu video juego favorito?"} />
 
-        <Questionary question={"What is your favorite sport?"} />
+        <Questionary question={"Cual es tu deporte favorito?"} />
 
-        <Questionary question={"What is your favorite color?"} />
+        <Questionary question={"Cual es tu color favorito?"} />
 
-        <Questionary question={"What is your favorite soccer player?"} />
+        <Questionary question={"Quién es tu jugador de fútbol favorito?"} />
       </Box>
     </Box>
   );

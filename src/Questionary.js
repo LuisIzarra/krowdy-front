@@ -9,6 +9,7 @@ const VIDEO_RECORDER_STATUS_STOP = "video_recorder_status_stop";
 const Questionary = ({
   question,
   onClickPlay,
+  onClickStop,
   width = 245,
   height = 393,
   sxProps = {},
@@ -29,6 +30,7 @@ const Questionary = ({
 
   const _handleOnClickStop = () => {
     _handleOnClick(VIDEO_RECORDER_STATUS_PLAY);
+    onClickStop();
     console.log("stop");
   };
 
